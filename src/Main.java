@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
 
     }
 
@@ -36,6 +37,16 @@ public class Main {
         if (min != Integer.MAX_VALUE && max != Integer.MAX_VALUE) {
             System.out.println("Минимальная сумма трат за день составила" + min + "рублей. Максимальная сумма трат за день составила" + max + "рублей.");
         }
+    }
+    private static void task3() {
+        System.out.println("Задача 3");
+        int[] payments = generateRandomArray();
+        System.out.println(Arrays.toString(payments));
+        int sum = 0;
+        for (int i = 0; i < payments.length; i++) {
+            sum = sum + payments[i];
+        }
+            System.out.println("Средняя сумма трат за месяц составила " + (double) sum / payments.length + "рублей.");
     }
 
     // Объявить метод «сгенерироватьМассив»
