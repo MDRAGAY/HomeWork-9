@@ -5,6 +5,8 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
+
 
     }
 
@@ -20,7 +22,7 @@ public class Main {
         System.out.println("Сумма трат за месяц составила" + sum + "рублей");
     }
 
-       private static void task2() {
+    private static void task2() {
         System.out.println("Задача 2");
         int[] payments = generateRandomArray();
         System.out.println(Arrays.toString(payments));
@@ -38,6 +40,7 @@ public class Main {
             System.out.println("Минимальная сумма трат за день составила" + min + "рублей. Максимальная сумма трат за день составила" + max + "рублей.");
         }
     }
+
     private static void task3() {
         System.out.println("Задача 3");
         int[] payments = generateRandomArray();
@@ -46,8 +49,20 @@ public class Main {
         for (int i = 0; i < payments.length; i++) {
             sum = sum + payments[i];
         }
-            System.out.println("Средняя сумма трат за месяц составила " + (double) sum / payments.length + "рублей.");
+        System.out.println("Средняя сумма трат за месяц составила " + (double) sum / payments.length + "рублей.");
     }
+
+    private static void task4() {
+        System.out.println("Задача 4");
+        char[] chars = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v','I'};
+        String IvanovIvan = new StringBuffer()
+                .append(chars)
+                .reverse()
+                .toString();
+        System.out.println(IvanovIvan);
+    }
+
+
 
     // Объявить метод «сгенерироватьМассив»
     public static int[] generateRandomArray() {
